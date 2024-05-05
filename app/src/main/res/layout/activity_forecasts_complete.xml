@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8ECFA">
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#0054FF"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="Forecast complete info"
+        android:textAlignment="center"
+        android:textColor="#D8ECFA"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textCDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textCDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info" />
+
+    <TextView
+        android:id="@+id/textCDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textCHour"
+        app:layout_constraintEnd_toEndOf="@+id/textCDay"
+        app:layout_constraintStart_toStartOf="@+id/textCDay"
+        app:layout_constraintTop_toBottomOf="@+id/textCDay" />
+
+    <TextView
+        android:id="@+id/textCHour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textCWeather"
+        app:layout_constraintEnd_toEndOf="@+id/textCDate"
+        app:layout_constraintStart_toStartOf="@+id/textCDate"
+        app:layout_constraintTop_toBottomOf="@+id/textCDate" />
+
+    <TextView
+        android:id="@+id/textCWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textCMax"
+        app:layout_constraintEnd_toEndOf="@+id/textCHour"
+        app:layout_constraintStart_toStartOf="@+id/textCHour"
+        app:layout_constraintTop_toBottomOf="@+id/textCHour" />
+
+    <TextView
+        android:id="@+id/textCMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textCMin"
+        app:layout_constraintEnd_toEndOf="@+id/textCWeather"
+        app:layout_constraintStart_toStartOf="@+id/textCWeather"
+        app:layout_constraintTop_toBottomOf="@+id/textCWeather" />
+
+    <TextView
+        android:id="@+id/textCMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textCTemp"
+        app:layout_constraintEnd_toEndOf="@+id/textCMax"
+        app:layout_constraintStart_toStartOf="@+id/textCMax"
+        app:layout_constraintTop_toBottomOf="@+id/textCMax" />
+
+    <TextView
+        android:id="@+id/textCTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textCFL"
+        app:layout_constraintEnd_toEndOf="@+id/textCMin"
+        app:layout_constraintStart_toStartOf="@+id/textCMin"
+        app:layout_constraintTop_toBottomOf="@+id/textCMin" />
+
+    <TextView
+        android:id="@+id/textCFL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textCHumidity"
+        app:layout_constraintEnd_toEndOf="@+id/textCTemp"
+        app:layout_constraintStart_toStartOf="@+id/textCTemp"
+        app:layout_constraintTop_toBottomOf="@+id/textCTemp" />
+
+    <TextView
+        android:id="@+id/textCHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textCWind"
+        app:layout_constraintEnd_toEndOf="@+id/textCFL"
+        app:layout_constraintStart_toStartOf="@+id/textCFL"
+        app:layout_constraintTop_toBottomOf="@+id/textCFL" />
+
+    <TextView
+        android:id="@+id/textCWind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textCHumidity"
+        app:layout_constraintStart_toStartOf="@+id/textCHumidity"
+        app:layout_constraintTop_toBottomOf="@+id/textCHumidity" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

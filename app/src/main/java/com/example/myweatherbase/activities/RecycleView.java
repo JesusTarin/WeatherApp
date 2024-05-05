@@ -1,6 +1,7 @@
 package com.example.myweatherbase.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,7 +49,9 @@ public class RecycleView extends RecyclerView.Adapter<RecycleView.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         com.example.myweatherbase.activities.model.List forecast = root.list.get(position);
         ImageDownloader.downloadImage(Parameters.ICON_URL_PRE + forecast.weather.get(0).icon + Parameters.ICON_URL_POST, holder.weatherImage);
-        holder.textWeather.setText(forecast.weather.get(0).description);
+        String weather = forecast.weather.get(0).description;
+        String weatherDesc = weather.substring(0,1).toUpperCase()+weather.substring(1);
+        holder.textWeather.setText(weatherDesc.length()>8?weatherDesc.substring(0,8)+"...":weatherDesc);
         holder.textMin.setText("Min " + forecast.main.temp_min);
         holder.textMax.setText("Max " + forecast.main.temp_max);
 
@@ -84,17 +87,17 @@ public class RecycleView extends RecyclerView.Adapter<RecycleView.ViewHolder> {
 
     private static String writeDayOfWeek(String shortDay) {
         switch (shortDay) {
-            case "mar":
+            case "Tue":
                 return "Tuesday";
-            case "mié":
+            case "Wed":
                 return "Wednesday";
-            case "jue":
+            case "Thu":
                 return "Thursday";
-            case "vie":
+            case "Fri":
                 return "Friday";
-            case "sab":
+            case "Sat":
                 return "Saturday";
-            case "dom":
+            case "Sun":
                 return "Sunday";
             default:
                 return "Monday";
